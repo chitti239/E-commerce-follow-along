@@ -34,4 +34,21 @@ This project will utilize the MERN stack, which includes:
 - **React**: A JavaScript library for building user interfaces.
 - **Node.js**: A runtime environment for executing JavaScript on the server side.
 
+## Milestone 1
+
+- Completed foundation for your E-Commerce Application.
+
+
+## Milestone 2
+
+- Separate folders for frontend and backend.
+- A functional Login Page in the frontend.
+- Completed setting for tailwind-css.
+
+## Milestone 3
+
+- Organized the backend folder structure for scalability.
+- Connected the server to MongoDb using Mongoose.
+- Implemented error-handling middleware for API stability
+
 This project aims to provide a full-featured e-commerce solution while enhancing your skills in web development, database management, and user interaction using the MERN stack.
