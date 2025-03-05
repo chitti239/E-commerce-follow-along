@@ -51,4 +51,10 @@ This project will utilize the MERN stack, which includes:
 - Connected the server to MongoDb using Mongoose.
 - Implemented error-handling middleware for API stability
 
+## Milestone 4
+
+- Created the User Model in Mongoose to define user data structure.
+- Developed the User Controller to manage user authentication (signup,login).
+- Implemented Multer for file handling , allowing user profile and product image uploads.
+
 This project aims to provide a full-featured e-commerce solution while enhancing your skills in web development, database management, and user interaction using the MERN stack.
