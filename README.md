@@ -57,4 +57,9 @@ This project will utilize the MERN stack, which includes:
 - Developed the User Controller to manage user authentication (signup,login).
 - Implemented Multer for file handling , allowing user profile and product image uploads.
 
+## Milestone 5
+
+- Createdthe Signup page in React and added code for signup backend also.
+- Added the Signup page validation in (signup,login).
+
 This project aims to provide a full-featured e-commerce solution while enhancing your skills in web development, database management, and user interaction using the MERN stack.
