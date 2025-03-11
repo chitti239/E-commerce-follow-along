@@ -62,4 +62,9 @@ This project will utilize the MERN stack, which includes:
 - Createdthe Signup page in React and added code for signup backend also.
 - Added the Signup page validation in (signup,login).
 
+## Milestone 6
+
+- Added the password encryption in the backend signup page.
+- Added comparision for checking password is correct or not in login backend.
+
 This project aims to provide a full-featured e-commerce solution while enhancing your skills in web development, database management, and user interaction using the MERN stack.
