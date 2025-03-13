@@ -67,4 +67,13 @@ This project will utilize the MERN stack, which includes:
 - Added the password encryption in the backend signup page.
 - Added comparision for checking password is correct or not in login backend.
 
+## Milestone 7
+
+- Create Login Endpoint:
+   * Accepted user credentials (email/username and password).
+   * Retrieved the corresponding user from the database.
+- Validate Password:
+   * Used bcrypt to hash the entered password.
+   * Compared it with the stored hashed password for authentication.
+
 This project aims to provide a full-featured e-commerce solution while enhancing your skills in web development, database management, and user interaction using the MERN stack.
