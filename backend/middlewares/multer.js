@@ -3,7 +3,7 @@ const path = require("path");
 
 const userImageStore = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, '../uploadUserImage/userImages'));
+    cb(null, path.join(__dirname, '../uploads/userImages'));
   },
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
@@ -11,17 +11,52 @@ const userImageStore = multer.diskStorage({
   }
 });
 
+const ProductImageStore = multer.diskStorage({
+  destination: function(req,file,cb){
+    cb(null,path.join(__dirname,"../uploads/productImages"))
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
+  }
+})
+
 const userImage = multer({
   storage: userImageStore,
   limits: { fileSize: 5 * 1024 * 1024 }, // 5MB limit
   fileFilter: (req, file, cb) => {
     const extention = path.extname(file.originalname).toLowerCase();
     const mimetype = file.mimetype;
-    
+
     const allowedExtention = { 
-      ".jpeg": true, 
-      ".png": true, 
-      ".jpg": true 
+      jpeg: true, 
+      png: true, 
+      jpg: true 
+    };
+    const allowedMimetype = { 
+      "image/jpeg": true,
+       "image/png": true, 
+       "image/jpg": true 
+      };
+
+    if (!allowedExtention[extention] && !allowedMimetype[mimetype]) {
+      cb(new Error("File extension not allowed"));
+    }
+    
+    cb(null, true);
+  }
+});
+const productImages = multer({
+  storage: ProductImageStore,
+  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB limit
+  fileFilter: (req, file, cb) => {
+    const extention = path.extname(file.originalname).toLowerCase();
+    const mimetype = file.mimetype;
+
+    const allowedExtention = { 
+      jpeg: true, 
+      png: true, 
+      jpg: true 
     };
     const allowedMimetype = { 
       "image/jpeg": true,
@@ -37,4 +72,4 @@ const userImage = multer({
   }
 });
 
-module.exports = userImage;
+module.exports = {userImage,productImages};

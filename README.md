@@ -81,5 +81,10 @@ This project will utilize the MERN stack, which includes:
 - Created the AddProduct.jsx page in frontend.
 - Added form validation in AddProducts page.
 
+## Milestone 10
+
+- Created schema - created ProductModle.js in backend
+                 - created ProductRouter.js in backend
+
 
 This project aims to provide a full-featured e-commerce solution while enhancing your skills in web development, database management, and user interaction using the MERN stack.
