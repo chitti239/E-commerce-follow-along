@@ -1,17 +1,40 @@
 const multer = require("multer");
+const path = require("path");
 
+const userImageStore = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, path.join(__dirname, '../uploadUserImage/userImages'));
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
+  }
+});
 
+const userImage = multer({
+  storage: userImageStore,
+  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB limit
+  fileFilter: (req, file, cb) => {
+    const extention = path.extname(file.originalname).toLowerCase();
+    const mimetype = file.mimetype;
+    
+    const allowedExtention = { 
+      ".jpeg": true, 
+      ".png": true, 
+      ".jpg": true 
+    };
+    const allowedMimetype = { 
+      "image/jpeg": true,
+       "image/png": true, 
+       "image/jpg": true 
+      };
 
-const storage1 = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null,__dirname, '../userImages')
-    },
-    filename: function (req, file, cb) {
-      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
-      cb(null, file.fieldname + '-' + uniqueSuffix)
+    if (!allowedExtention[extention] && !allowedMimetype[mimetype]) {
+      cb(new Error("File extension not allowed"));
     }
-  })
-  
-  const upload = multer({ storage: storage1 })
+    
+    cb(null, true);
+  }
+});
 
-module.exports = uploadUserImage
+module.exports = userImage;

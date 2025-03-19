@@ -76,5 +76,10 @@ This project will utilize the MERN stack, which includes:
 
 - Added the Product page in frontend as Homepage.
 
+## Milestone 9
+
+- Created the AddProduct.jsx page in frontend.
+- Added form validation in AddProducts page.
+
 
 This project aims to provide a full-featured e-commerce solution while enhancing your skills in web development, database management, and user interaction using the MERN stack.

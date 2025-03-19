@@ -28,7 +28,7 @@ const signup = () => {
             alert("Signup Successfully")
         } catch (error) {
             console.log(error);
-            alert("Something went wrong");
+            alert("Something went wrong!");
         }
         
     }
