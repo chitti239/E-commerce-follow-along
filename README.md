@@ -89,7 +89,8 @@ This project will utilize the MERN stack, which includes:
 
 ## Milestone 11
 
-- created  home page for dynamic product
+- created  home page for dynamic products presentation.
+- added the backend part for handeling products (created endpoint to get products).
 
 
 This project aims to provide a full-featured e-commerce solution while enhancing your skills in web development, database management, and user interaction using the MERN stack.
