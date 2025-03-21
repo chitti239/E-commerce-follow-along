@@ -83,8 +83,13 @@ This project will utilize the MERN stack, which includes:
 
 ## Milestone 10
 
-- Created schema - created ProductModle.js in backend
-                 - created ProductRouter.js in backend
+- Created schema product upload
+- created ProductModle.js in backend
+- created ProductRouter.js in backend
+
+## Milestone 11
+
+- created  home page for dynamic product
 
 
 This project aims to provide a full-featured e-commerce solution while enhancing your skills in web development, database management, and user interaction using the MERN stack.
