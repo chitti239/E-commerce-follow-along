@@ -1,3 +1,5 @@
+import axios from 'axios'
+import { json } from 'express'
 import React, { useState } from 'react'
 
 const Login = () => {
@@ -10,7 +12,7 @@ const Login = () => {
         setLoginData({...loginData,[e.target.name]:e.target.value})
     }
 
-    function handelLogin(event){
+    async function handelLogin(event){
         event.presentDefault()
         if(!loginData.email){
             alert("Please enter email...");
@@ -22,7 +24,16 @@ const Login = () => {
             return;
         }
 
-        alert("You are successfully loged in");
+        try {
+          const checkUser = await axios.post("http://localhost:8080/user/login",loginData);
+          console.log(checkUser);
+          localStorage.setItem("Follow-along-auth-token",json.stringify(checkUser.data.token));
+          alert("You are successfully loged in");
+        } catch (error) {
+          console.log(error);
+          alert("Something went wrong while logging...")
+        }
+
     }
   return (
     <div>
