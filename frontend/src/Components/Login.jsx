@@ -1,49 +1,51 @@
-import axios from 'axios'
-import { json } from 'express'
 import React, { useState } from 'react'
-
+import styles from "./login.css";
+import axios from 'axios';
 const Login = () => {
     const[loginData,setLoginData] = useState({
         email:"",
         password:""
     })
 
-    function handelInput(e){
+    function handleInput(e){
         setLoginData({...loginData,[e.target.name]:e.target.value})
     }
 
-    async function handelLogin(event){
-        event.presentDefault()
-        if(!loginData.email){
+
+   async function handleLogin(event){
+        event.preventDefault();
+        if(loginData.email == ""){
             alert("Please enter email...");
             return;
         }
 
-        if(loginData.password==""){
+        if(loginData.password == ""){
             alert("Please enter password...");
             return;
         }
-
         try {
-          const checkUser = await axios.post("http://localhost:8080/user/login",loginData);
-          console.log(checkUser);
-          localStorage.setItem("Follow-along-auth-token",json.stringify(checkUser.data.token));
-          alert("You are successfully loged in");
+            const checkUser = await axios.post("http://localhost:8080/user/login",loginData);
+           console.log(checkUser)
+           localStorage.setItem("follow-along-auth-token-user-name-id",JSON.stringify({token:checkUser.data.token,name:checkUser.data.name,id:checkUser.data.id}))
+            alert("You sucessfully loged in");
         } catch (error) {
-          console.log(error);
-          alert("Something went wrong while logging...")
+            console.log(error);
+            alert("Someting went wrong while logging in");
         }
 
+
+        
     }
+
   return (
     <div>
-      <form style={{display:"flex"}}>
-        <label htmlFor="">Email</label>
-        <input type="email" name='email' onChange={handelInput} placeholder='Email....' />
-        <label htmlFor="">Password</label>
-        <input type="password" name='password' onChange={handelInput} placeholder='Password' />
-        <input type="submit" />
-      </form>
+        <form onSubmit={handleLogin} className={styles.formbox} >
+            <label htmlFor="">Email</label>
+            <input type="email" value={loginData.email} name='email' onChange={handleInput} placeholder='Email...' />
+            <label>password</label>
+            <input type="password" value={loginData.password} name="password" onChange={handleInput} placeholder='password...' />
+            <input type="submit" />
+        </form>
     </div>
   )
 }

@@ -1,7 +1,20 @@
-/* .regis-box{
+.formbox{
     border: 2px solid aqua;
+    margin-bottom: 1rem;
+    width: max-content;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    padding: 0.5rem;
 
-} */
+}
+.formbox{
+    display: block;
+    margin: auto;
+}
+.formbox > input{
+    display: flex;
+}
 
 /* signup.css */
 

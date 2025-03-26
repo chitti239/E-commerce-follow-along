@@ -98,5 +98,10 @@ This project will utilize the MERN stack, which includes:
 - created product page for dynaminc presentation according to user mail.
 - created backend for specific user products.
 
+## Milestone 13
+
+- Created Product update enpoint for updatind process.
+- Created Form for updating data in frontend and also created auto-fill function.
+
 
 This project aims to provide a full-featured e-commerce solution while enhancing your skills in web development, database management, and user interaction using the MERN stack.
