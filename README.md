@@ -103,5 +103,10 @@ This project will utilize the MERN stack, which includes:
 - Created Product update enpoint for updatind process.
 - Created Form for updating data in frontend and also created auto-fill function.
 
+## Milestone 14
+
+- Created product delete endpoint for updating products.
+- Created form for Deleting product in the frontend.
+
 
 This project aims to provide a full-featured e-commerce solution while enhancing your skills in web development, database management, and user interaction using the MERN stack.

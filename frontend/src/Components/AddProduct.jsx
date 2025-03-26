@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from "axios";
-import styles from "./AddProduct.module,css"
+import  "./AddProduct.module,css"
 
 const AddProduct = () => {
     const[noOfImages,setNoOfImages] = useState(new Array(1).fill(1));
@@ -72,6 +72,7 @@ const AddProduct = () => {
                 }} />
             ))
         }
+        <input type='submit' value={"upload products"} />
       </form>
     </div>
   )
