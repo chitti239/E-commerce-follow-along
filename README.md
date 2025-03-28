@@ -108,5 +108,8 @@ This project will utilize the MERN stack, which includes:
 - Created product delete endpoint for updating products.
 - Created form for Deleting product in the frontend.
 
+## Milestone 15: 
+- Created Navbar
+- Created Navigation bar for navigating between pages.
 
 This project aims to provide a full-featured e-commerce solution while enhancing your skills in web development, database management, and user interaction using the MERN stack.

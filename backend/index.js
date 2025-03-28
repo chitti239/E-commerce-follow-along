@@ -16,42 +16,47 @@ app.use(cors);
 const connect = require("./mongoDB");
 const userRouter = require("./controllers/userRouter")
 const productRouter = require("./controllers/ProductRouter")
+const allProductRouter = require("../controllers/allProducts")
 
  
 app.get("/",(req,res)=>{
     try {
-        res.status(200).send({mgs:"This is E-commerce code along backend"});
+        res.send({message:"This is E-commerce Follow Along Backend"});
     } catch (error) {
-        res.status(500).send({message:"error occured"});
+        res.status(500).send({error});
     }
 })
 
-app.use("/user",userRouter)
+app.use("/user",userRouter);
 
-app.use("./ProductRouter");
-
-app.use("product",async(req,res)=>{
+app.use("/product",async (req, res, next) => {
     try {
-        const auth = req.headers.authorization;
-        if(!auth){
-            return res.status(401).send({msg:"Please"})
+        const token = req.header("Authorization");
+        console.log(token)
+        if (!token) {
+            return res.status(401).json({ message: "Please login" });
         }
-        const decoded = jwt.verify(auth,process.env,JWT_PASSWORD);
-        const user = await userModel.findOne({_id:decoded.id});
-        if(!user){
-            return res.status(401).send({msg:"Please register first....."})
+        
+        const decoded = jwt.verify(token, process.env.JWT_PASSWORD);
+        const user = await userModel.findById(decoded.id);
+        
+        if (!user && user.id) {
+            return res.status(404).json({ message: "Please signup" });
         }
-        console.log(decoded);
+        console.log(user.id)
+        req.userId = user.id; 
         next();
     } catch (error) {
-        return res.status(500).send({msg:"Something went wrong......"})
+        console.log(error)
+        return res.status(400).json({ message: "Invalid Token", error });
     }
-})
+},productRouter);
 
+app.use('/allproducts',allProductRouter);
 
 app.listen(8080,async()=>{
     try {
-        await connect();
+        await connect()
         console.log("Server connected successfully");
     } catch (error) {
         console.log("Error",error)
