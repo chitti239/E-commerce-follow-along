@@ -112,4 +112,8 @@ This project will utilize the MERN stack, which includes:
 - Created Navbar
 - Created Navigation bar for navigating between pages.
 
+## Milestone 16:
+- Created Product Details Page for showing full product details in details page.
+- Added Add to cart button with quantity selection.
+
 This project aims to provide a full-featured e-commerce solution while enhancing your skills in web development, database management, and user interaction using the MERN stack.

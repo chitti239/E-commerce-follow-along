@@ -23,3 +23,5 @@ allProductRouter.get("/:id",async(req,res)=>{
         return res.status(500).send({msg:"Something went wrong...."});
     }
 })
+
+module.exports = allProductRouter

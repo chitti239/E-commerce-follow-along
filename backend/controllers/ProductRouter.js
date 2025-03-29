@@ -1,7 +1,7 @@
 const express = require("express");
 const productRouter = express.Router();
 const productModel = require("../models/productModel");
-const { productImages } = require("../middleware/multer");
+const { productImages } = require("../middlewares/multer");
 
 
 const uploadImages = (req, res, next) => {

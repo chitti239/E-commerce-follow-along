@@ -1,7 +1,7 @@
 const express = require("express");
 const userModel = require("../models/userModel");
 const bcrypt = require("bcryptjs");
-const { userImage } = require("../middleware/multer");
+const { userImage } = require("../middlewares/multer");
 const jwt = require('jsonwebtoken');
 
 const userRouter = express.Router();

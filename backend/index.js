@@ -6,17 +6,18 @@ app.use(express.json());
 
 const dotenv = require("dotenv");
 dotenv.config();
+const path = require("path");
 
 const jwt = require('jsonwebtoken');
-const userModel= require("./models")
+const userModel= require("./models/userModel")
 
 const cors = require("cors");
 app.use(cors);
 
 const connect = require("./mongoDB");
-const userRouter = require("./controllers/userRouter")
-const productRouter = require("./controllers/ProductRouter")
-const allProductRouter = require("../controllers/allProducts")
+const userRouter = require("./controllers/userRouter");
+const productRouter = require("./controllers/ProductRouter");
+const allProductRouter = require("./controllers/allProducts");
 
  
 app.get("/",(req,res)=>{
@@ -53,6 +54,7 @@ app.use("/product",async (req, res, next) => {
 },productRouter);
 
 app.use('/allproducts',allProductRouter);
+app.use("/upload",express.static(path.join(__dirname,"uploads")));
 
 app.listen(8080,async()=>{
     try {
