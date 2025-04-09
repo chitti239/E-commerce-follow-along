@@ -1,10 +1,11 @@
 import React from 'react';
 import {Route,Routes} from "react-router-dom";
-import Products from './Products';
-import Login from './Login';
-import Signup from './signup'
-import AddProduct from './AddProduct';
-import MyProducts from './MyProducts';
+import Products from './Components/Products';
+import Login from './Components/Login';
+import Signup from './Components/signup'
+import AddProduct from './Components/AddProduct';
+import MyProducts from './Components/MyProducts';
+import CartCard from './Components/CartCard';
 
 const AllRoutings = () => {
   return (
@@ -14,6 +15,7 @@ const AllRoutings = () => {
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/addproducts' element={<AddProduct/>} />
         <Route path='/myproducts' element={<MyProducts/>} />
+        <Route path='/cart' element={<CartCard/>} />
     </Routes>
   )
 }

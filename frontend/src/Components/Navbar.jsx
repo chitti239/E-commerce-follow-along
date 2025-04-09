@@ -25,8 +25,15 @@ const Navbar = () => {
           navigate("/myproducts")
         }}>Myproducts</div>
       </div>
-      <div >
 
+      <div>
+        <div onClick={()=>{
+          navigate("/cart")
+        }}>Cart</div>
+      </div>
+
+      <div >
+        
         <div
         onClick={()=>{
             navigate("/login")

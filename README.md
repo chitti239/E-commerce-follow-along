@@ -152,6 +152,12 @@ This project is built using the MERN stack:
 - Created endpoints in backend CRUD for handling cart.
 - Handled quantity for product in cart.
 
+---
+
+### **Milestone 18**
+- Created cart page in frontend.
+- Handled cart operations from frontend.
+
 ## **Conclusion**
 This project provides a feature-rich e-commerce solution while strengthening your skills in web development, database management, and user interaction using the MERN stack. It is designed to be scalable, user-centric, and secure.
 

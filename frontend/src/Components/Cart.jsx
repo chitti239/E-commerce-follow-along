@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import axios, { formToJSON } from 'axios';
-import Card from './Card';
+import axios from 'axios';
 import styles from "./products.module.css"
 import MyProductCard from './MyProductCard';
+import CartCard from './CartCard';
 
-
-const MyProducts = () => {
-
+const Cart = () => {
     const [products,setProducts] = useState([]);
     function getData(){
         axios.get("https://localhost:8080/allproducts")
@@ -14,6 +12,7 @@ const MyProducts = () => {
             console.log(data);
 
             const userData = JSON.parse(localStorage.getItem("follow-along-auth-token-user-name-id"));
+            
             const newData = data.data.products.filter((ele)=>{
                 return ele.userData == userData.id;
             })
@@ -34,7 +33,7 @@ const MyProducts = () => {
         <div className={styles.products}>
       {
         products.map((ele)=>{
-            return <MyProductCard key={ele.id} product={ele}/>
+            return <CartCard key={ele.id} product={ele}/>
         })
       }
     </div>
@@ -42,6 +41,6 @@ const MyProducts = () => {
   )
 }
 
-export default MyProducts;
+export default Cart;
 
 
