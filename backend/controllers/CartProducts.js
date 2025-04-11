@@ -17,7 +17,7 @@ cartRouter.get("/cartproduct/:id",async(req,res)=>{
         }
         const{title,description,price,images} = product;
         const newCartProduct = await cartModel.insertOne({title,description,price,images,uderId:req.userId});
-        res.status(200).send({msg:"Product added successfully!"});
+        res.status(200).send({msg:"Product added successfully!",newCartProduct});
     } catch (error) {
         return res.status(500).send({msg:"Interal server error.."});
     }
@@ -52,7 +52,7 @@ cartRouter.put("/:cartproductid",async(req,res)=>{
 cartRouter.get("/",async(req,res)=>{
     try {
         const userId = req.userId;
-        const cartData = await cartModel.find({_id:userId});
+        const cartData = await cartModel.find({userId:userId});
         return res.status(200).send({msg:"cart items",cartproducts:cartData.length>0?cartData:"no items found in cart"});
     } catch (error) {
         return res.status(500).send({msg:"Interal server error.."});

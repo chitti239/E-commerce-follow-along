@@ -1,21 +1,21 @@
 import './App.css'
- 
-import AllRoutings from './Components/AllRoutings'
-import {BrowserRouter} from "react-router-dom";
-import Navbar from './Components/Navbar'
-
+import { BrowserRouter } from 'react-router-dom'
+import AllRouting from './AllRouting'
+import Navbar from './components/Navbar'
 
 function App() {
+
   return (
     <>
-      <BrowserRouter>
-        <Navbar/>
-        <AllRoutings/>
-      </BrowserRouter>
-      
-     
+    <BrowserRouter>
+      <Navbar/>
+      <AllRouting/>
+    </BrowserRouter>
+
     </>
   )
 }
 
 export default App
+
+
