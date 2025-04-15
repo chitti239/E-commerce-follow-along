@@ -163,6 +163,12 @@ This project is built using the MERN stack:
 ### **Milestone 19**
 - Created post request for updating for cart item .
 
+---
+
+### **Milestone 20**
+- Created endpoint for userDetails in backend.
+- Created User.jsx for userDetails in frontend.
+
 
 ## **Conclusion**
 This project provides a feature-rich e-commerce solution while strengthening your skills in web development, database management, and user interaction using the MERN stack. It is designed to be scalable, user-centric, and secure.
