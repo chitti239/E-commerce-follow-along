@@ -169,6 +169,13 @@ This project is built using the MERN stack:
 - Created endpoint for userDetails in backend.
 - Created User.jsx for userDetails in frontend.
 
+---
+
+### **Milestone 21**
+- Created frontend for Address
+- Created route for Add Address Page in Frontend.
+- Created form for adding Address.
+- Stored address using useState Hook.
 
 ## **Conclusion**
 This project provides a feature-rich e-commerce solution while strengthening your skills in web development, database management, and user interaction using the MERN stack. It is designed to be scalable, user-centric, and secure.
