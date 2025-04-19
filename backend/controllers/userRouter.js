@@ -1,8 +1,9 @@
 const express = require("express");
 const userModel = require("../models/userModel");
 const bcrypt = require("bcryptjs");
-const { userImage } = require("../middlewares/multer");
+const { userImage } = require("../middleware/multer");
 const jwt = require('jsonwebtoken');
+const { updateMany } = require("../models/productModel");
 
 const userRouter = express.Router();
 
@@ -44,8 +45,7 @@ userRouter.post("/signup", async (req, res) => {
                 image: imageUrl 
             });
             const token = jwt.sign({ name:newUser.name,email:newUser.email,id:newUser.id }, process.env.JWT_PASSWORD);
-
-            return res.status(201).json({ message: "User registered successfully", token:token });
+            return res.status(201).json({ message: "User registered successfully", token:token,name,id:newUser.id });
         });
     } catch (error) {
         console.error("Signup Error:", error);
@@ -56,8 +56,9 @@ userRouter.post("/signup", async (req, res) => {
 // Login Route
 userRouter.post("/login", async (req, res) => {
     try {
+        console.log("email,password")
         const { email, password } = req.body;
-
+        
         if (!email || !password) {
             return res.status(400).json({ message: "All details are required" });
         }
@@ -68,20 +69,41 @@ userRouter.post("/login", async (req, res) => {
             return res.status(401).json({ message: "Invalid email or password" });
         }
 
-        // Corrected password comparison
+        
         const matchedPass = bcrypt.compareSync(password, user.password);
 
         if (matchedPass) {
             const token = jwt.sign({ name:user.name,email:user.email,id:user.id }, process.env.JWT_PASSWORD);
-            return res.status(200).json({ message: "User logged in successfully",token });
+            return res.status(200).json({ message: "User logged in successfully",token,name:user.name,id:user.id,userImage:user.image});
         } else {
             return res.status(401).json({ message: "Invalid email or password" });
         }
+
         
     } catch (error) {
         console.error("Login Error:", error);
         return res.status(500).json({ error: "Internal Server Error" });
     }
 });
+
+userRouter.put("/updateAddress/:id",async(req,res)=>{
+    try {
+        const {country,city,address1,address2,zipcode} = req.body;
+        if(!country || !city || !address1 || !address2 || !zipcode){
+            return res.status(400).send({message:"All fields are required"});
+        }
+        if(!id){
+            res.status(400).send({message:"Please login"});
+        }
+        const updatedUserAddress = await userModel.findById({_id:id},{...req.body});
+        if(!updatedUserAddress){
+             return res.status(400).send({message:"User not found"});
+        }
+        return res.status(200).send({message:"User updatesd successfully"});
+    } catch (error) {
+        console.error("Address Error:", error);
+        return res.status(500).json({ error: "Internal Server Error" });
+    }
+})
 
 module.exports = userRouter;

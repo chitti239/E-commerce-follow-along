@@ -1,7 +1,8 @@
 import './App.css'
 import { BrowserRouter } from 'react-router-dom'
-import AllRouting from './AllRouting'
-import Navbar from './components/Navbar'
+import AllRoutings from './AllRoutings'
+import Navbar from './Components/Navbar';
+
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
     <>
     <BrowserRouter>
       <Navbar/>
-      <AllRouting/>
+      <AllRoutings/>
     </BrowserRouter>
 
     </>

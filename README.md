@@ -177,6 +177,13 @@ This project is built using the MERN stack:
 - Created form for adding Address.
 - Stored address using useState Hook.
 
+---
+
+### **Milestone 22**
+- Created Backend for Address and attached with fronted
+- created backend endpoint for handeling address. 
+-  added backend endpoint with frontend.
+
 ## **Conclusion**
 This project provides a feature-rich e-commerce solution while strengthening your skills in web development, database management, and user interaction using the MERN stack. It is designed to be scalable, user-centric, and secure.
 
