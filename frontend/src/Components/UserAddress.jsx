@@ -17,7 +17,7 @@ const UserAddress = () => {
                 alert("please login first");
                 return;
             }
-           // const sendAddress = await axios.put(`http://localhost:8080/user/updateAddress/${userData.id}`);
+           const sendAddress = await axios.put(`http://localhost:8080/user/updateAddress/${userData.id}`);
             alert("address updated sucessfully");
         } catch (error) {
             alert("Something went wrong");
