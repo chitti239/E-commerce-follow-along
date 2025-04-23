@@ -192,6 +192,14 @@ This project is built using the MERN stack:
 - Created select address page and provided option to select one address.
 - Created backend endpoint to send all addresses to user.
 
+---
+
+### **Milestone 24**
+- Displayed all products in cart.
+- Displayed all address in address selection page.
+- Diaplyed total price in cart.
+- Added place order button at bottom.
+
 ## **Conclusion**
 This project provides a feature-rich e-commerce solution while strengthening your skills in web development, database management, and user interaction using the MERN stack. It is designed to be scalable, user-centric, and secure.
 
