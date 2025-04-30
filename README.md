@@ -206,6 +206,13 @@ This project is built using the MERN stack:
 - Implemented email service from nodemailer.
 - Handled address for the delivery.
 
+### **Milestone 26**
+- Worked on order backend and email service.
+- Implemented email service from nodemailer.
+- Sending order details to user via mails.
+
+
+
 ## **Conclusion**
 This project provides a feature-rich e-commerce solution while strengthening your skills in web development, database management, and user interaction using the MERN stack. It is designed to be scalable, user-centric, and secure.
 
