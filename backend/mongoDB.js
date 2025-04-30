@@ -5,7 +5,7 @@ async function connect(){
         await mongoose.connect("mongodb+srv://sharinisamsani422:follow-along-section@cluster0.aszh6.mongodb.net/")
 
     }catch(error){
-        console.log("Mongo bd error",error);
+        console.log("Mongobd error",error);
     }
     
 }
