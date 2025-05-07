@@ -3,7 +3,6 @@ const userModel = require("../models/userModel");
 const bcrypt = require("bcryptjs");
 const { userImage } = require("../middleware/multer");
 const jwt = require('jsonwebtoken');
-const { updateMany } = require("../models/productModel");
 
 const userRouter = express.Router();
 
@@ -86,24 +85,5 @@ userRouter.post("/login", async (req, res) => {
     }
 });
 
-userRouter.put("/updateAddress/:id",async(req,res)=>{
-    try {
-        const {country,city,address1,address2,zipcode} = req.body;
-        if(!country || !city || !address1 || !address2 || !zipcode){
-            return res.status(400).send({message:"All fields are required"});
-        }
-        if(!id){
-            res.status(400).send({message:"Please login"});
-        }
-        const updatedUserAddress = await userModel.findById({_id:id},{...req.body});
-        if(!updatedUserAddress){
-             return res.status(400).send({message:"User not found"});
-        }
-        return res.status(200).send({message:"User updatesd successfully"});
-    } catch (error) {
-        console.error("Address Error:", error);
-        return res.status(500).json({ error: "Internal Server Error" });
-    }
-})
 
 module.exports = userRouter;

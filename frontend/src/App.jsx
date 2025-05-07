@@ -1,8 +1,11 @@
+import { useState } from 'react'
 import './App.css'
+import Login from './components/Login'
+import Signup from './components/Signup'
+import Products from './components/Products'
 import { BrowserRouter } from 'react-router-dom'
-import AllRoutings from './AllRoutings'
-import Navbar from './Components/Navbar';
-
+import AllRouting from './AllRouting'
+import Navbar from './components/Navbar'
 
 function App() {
 
@@ -10,7 +13,7 @@ function App() {
     <>
     <BrowserRouter>
       <Navbar/>
-      <AllRoutings/>
+      <AllRouting/>
     </BrowserRouter>
 
     </>
@@ -18,5 +21,3 @@ function App() {
 }
 
 export default App
-
-

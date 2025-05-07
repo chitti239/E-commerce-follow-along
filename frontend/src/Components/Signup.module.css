@@ -1,82 +1,18 @@
 .formbox{
-    border: 2px solid aqua;
-    margin-bottom: 1rem;
-    width: max-content;
-    align-content: center;
+    border: 5px solid blue;
+    margin: auto;
     align-items: center;
-    display: flex;
+    align-content: center;
+    width: max-content;
     padding: 0.5rem;
-
 }
-.formbox{
+
+.formbox  *{
     display: block;
     margin: auto;
 }
+
 .formbox > input{
     display: flex;
+    justify-content: start;
 }
-
-/* signup.css */
-
-/* body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-} */
-
-/* .regis-box {
-    background-color: #b9b8b8;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-}
-
-.regis-box form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.regis-box label {
-    font-size: 14px;
-    font-weight: bold;
-    text-align: left;
-}
-
-.regis-box input[type="text"],
-.regis-box input[type="email"],
-.regis-box input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    color: black;
-}
-
-.regis-box input[type="submit"] {
-    background-color: #531ddb;
-    color: rgb(220, 215, 215);
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.regis-box input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-.regis-box input:focus {
-    border-color: #4caf50;
-    outline: none;
-} */

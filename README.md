@@ -200,19 +200,33 @@ This project is built using the MERN stack:
 - Diaplyed total price in cart.
 - Added place order button at bottom.
 
+---
+
 ### **Milestone 25**
 - Worked on order backend and email service.
 - Createdn enpoint for order.
 - Implemented email service from nodemailer.
 - Handled address for the delivery.
 
+---
+
 ### **Milestone 26**
 - Worked on order backend and email service.
 - Implemented email service from nodemailer.
 - Sending order details to user via mails.
 
+---
+
 ### **Milestone 27**
 - Created get request to get request my orders.
+
+---
+
+### **Milestone 28**
+- In my-orders page for every order add cancel order button.
+- If the order is already canceled this button will not be display.
+- created an endpoint that will receive the order-id.
+- Get the order using this id and mark the status canceled and save.
 
 ## **Conclusion**
 This project provides a feature-rich e-commerce solution while strengthening your skills in web development, database management, and user interaction using the MERN stack. It is designed to be scalable, user-centric, and secure.
