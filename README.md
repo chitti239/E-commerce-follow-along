@@ -224,9 +224,14 @@ This project is built using the MERN stack:
 
 ### **Milestone 28**
 - In my-orders page for every order add cancel order button.
-- If the order is already canceled this button will not be display.
 - created an endpoint that will receive the order-id.
 - Get the order using this id and mark the status canceled and save.
+
+---
+
+### **Milestone 29**
+- Cancel order payment.
+- Integrated dummy payment.
 
 ## **Conclusion**
 This project provides a feature-rich e-commerce solution while strengthening your skills in web development, database management, and user interaction using the MERN stack. It is designed to be scalable, user-centric, and secure.
