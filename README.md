@@ -233,6 +233,11 @@ This project is built using the MERN stack:
 - Cancel order payment.
 - Integrated dummy payment.
 
+---
+
+### **Milestone 30**
+- Worked on payment page
+
 ## **Conclusion**
 This project provides a feature-rich e-commerce solution while strengthening your skills in web development, database management, and user interaction using the MERN stack. It is designed to be scalable, user-centric, and secure.
 
