@@ -236,7 +236,18 @@ This project is built using the MERN stack:
 ---
 
 ### **Milestone 30**
-- Worked on payment page
+- Worked on payment page.
+
+---
+
+### **Milestone 31**
+- Implemented Redux in frontend.
+- Used Redux in user Details page.
+
+---
+
+### **Milestone 32**
+- Implemented Redux in frontend.
 
 ## **Conclusion**
 This project provides a feature-rich e-commerce solution while strengthening your skills in web development, database management, and user interaction using the MERN stack. It is designed to be scalable, user-centric, and secure.
