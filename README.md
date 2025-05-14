@@ -249,6 +249,12 @@ This project is built using the MERN stack:
 ### **Milestone 32**
 - Implemented Redux in frontend.
 
+---
+
+### **Milestone 33**
+- Implemented cookies auth by using cokie-parser npm package.
+- Added cookies by login page.
+
 ## **Conclusion**
 This project provides a feature-rich e-commerce solution while strengthening your skills in web development, database management, and user interaction using the MERN stack. It is designed to be scalable, user-centric, and secure.
 
