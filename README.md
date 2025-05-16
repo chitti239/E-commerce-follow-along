@@ -255,6 +255,11 @@ This project is built using the MERN stack:
 - Implemented cookies auth by using cokie-parser npm package.
 - Added cookies by login page.
 
+---
+
+### **Milestone 34**
+- Implemented token and cookies in both frontend and backend.
+
 ## **Conclusion**
 This project provides a feature-rich e-commerce solution while strengthening your skills in web development, database management, and user interaction using the MERN stack. It is designed to be scalable, user-centric, and secure.
 
